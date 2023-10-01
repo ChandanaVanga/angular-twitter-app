@@ -1,0 +1,62 @@
+body {
+    background-color: #888888;
+}
+
+.total-page {
+    transform: translate(300px, 120px);
+    display: flex;
+    width: 54%;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 1px 1px 14px #888888;
+    border-radius: 0.4rem;
+   flex-wrap: wrap;
+}
+
+.illustration, .form-side {
+    flex: 1;
+}
+.login-illustration {
+    width: 320px;
+    padding: 8px 0 0 8px;
+}
+.form-side {
+    padding: 0 24px 0 0;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+    width: 14rem;
+    margin-bottom: 0.8rem;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.label {
+    font-weight: 500;
+    font-size: large;
+    color: rgb(36, 35, 35);
+}
+
+.submit-button {
+    padding: 0.5rem;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0.2rem;
+    border: none;
+    background-color: rgb(68, 65, 211);
+    color: white;
+    margin: 1.6rem 0rem;
+}
+
+.welcome-text {
+    font-size: large;
+    font-weight: 500;
+    color: rgb(36, 35, 35);
+}
