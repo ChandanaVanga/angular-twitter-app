@@ -1,11 +1,14 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+
+/* body {
     background-color: #888888;
-}
+} */
 
 .total-page {
     transform: translate(300px, 120px);
     display: flex;
-    width: 54%;
+    width: 50%;
     background-color: rgb(247, 247, 247);
     box-shadow: 1px 1px 14px #888888;
     border-radius: 0.4rem;
@@ -15,12 +18,30 @@ body {
 .illustration, .form-side {
     flex: 1;
 }
+.illustration {
+   background-color: #F3F6FF;
+}
 .login-illustration {
-    width: 320px;
-    padding: 8px 0 0 8px;
+    width: 380px;
+    /* padding: 8px 0 0 8px; */
 }
 .form-side {
-    padding: 0 24px 0 0;
+    padding: 30px;
+}
+
+.greating {
+color: #404040;
+font-size:  28px;
+font-family: 'Poppins', sans-serif;
+font-weight: 500;
+margin: 0;
+}
+
+.welcome-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #404040;
+    font-family: "Poppins";
 }
 
 .fields {
@@ -40,8 +61,9 @@ input {
 
 .label {
     font-weight: 500;
-    font-size: large;
+    font-size: 18px;
     color: rgb(36, 35, 35);
+    font-family: 'Poppins', sans-serif;
 }
 
 .submit-button {
@@ -55,8 +77,4 @@ input {
     margin: 1.6rem 0rem;
 }
 
-.welcome-text {
-    font-size: large;
-    font-weight: 500;
-    color: rgb(36, 35, 35);
-}
+
