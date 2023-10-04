@@ -6,13 +6,17 @@
 } */
 
 .total-page {
-    transform: translate(300px, 120px);
+    /* transform: translate(300px, 120px); */
     display: flex;
     width: 50%;
-    background-color: rgb(247, 247, 247);
+    background-color: #FFFFFF;
     box-shadow: 1px 1px 14px #888888;
     border-radius: 0.4rem;
    flex-wrap: wrap;
+   margin: auto;
+   position: absolute;
+  top: 20%;
+  left: 25%;
 }
 
 .illustration, .form-side {
@@ -20,6 +24,10 @@
 }
 .illustration {
    background-color: #F3F6FF;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 0.4rem 0 0 0.4rem;
 }
 .login-illustration {
     width: 380px;
@@ -27,10 +35,12 @@
 }
 .form-side {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .greating {
-color: #404040;
+color: #4e4e4e;
 font-size:  28px;
 font-family: 'Poppins', sans-serif;
 font-weight: 500;
@@ -40,8 +50,8 @@ margin: 0;
 .welcome-text {
     font-size: 18px;
     font-weight: 500;
-    color: #404040;
-    font-family: "Poppins";
+    color: #4e4e4e;
+    font-family: 'Poppins', sans-serif;
 }
 
 .fields {
@@ -51,18 +61,19 @@ margin: 0;
 }
 
 input {
-    padding: 12px;
-    width: 14rem;
+    padding: 10px;
+    /* width: 14rem; */
     margin-bottom: 0.8rem;
     margin-top: 0.3rem;
-    border-radius: 0.2rem;
+    border-radius: 1.2rem;
     border: none;
+    box-shadow: 0px 0px 8px #dddddd;
 }
 
 .label {
     font-weight: 500;
     font-size: 18px;
-    color: rgb(36, 35, 35);
+    color: #4e4e4e;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -70,11 +81,26 @@ input {
     padding: 0.5rem;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 0.2rem;
+    border-radius: 1.2rem;
     border: none;
-    background-color: rgb(68, 65, 211);
+    background-color: #86A8FF;
     color: white;
     margin: 1.6rem 0rem;
+    box-shadow: 0px 0px 12px inset #5D6E99;
 }
 
+.guiding-text {
+    font-size: 18px;
+    color: #4e4e4e;
+    font-family: 'Poppins', sans-serif;
+}
 
+.create-text {
+    text-decoration:none;
+}
+
+.fa-arrow-right {
+    font-size: 30px;
+    font-weight: normal;
+    color: #1E5DFF;
+}
