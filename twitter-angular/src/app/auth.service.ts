@@ -8,13 +8,13 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
 
-  baseApiUrl: string =  environment?.baseApiUrl;
+  // baseApiUrl: string =  environment?.baseApiUrl;
 
-  constructor(private http:HttpClient) { }
+  // constructor(private http:HttpClient) { }
 
-  postUser(body:any){
-    return this.http.post(this.baseApiUrl + '/api/users/registration', body)
-  }
+  // postUser(body:any){
+  //   return this.http.post(this.baseApiUrl + '/api/users/registration', body)
+  // }
 
   // fetchMobiles(){
 
