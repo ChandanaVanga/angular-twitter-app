@@ -1,0 +1,38 @@
+.header {
+    background-color: white;
+    box-shadow: 0px 0px 16px inset #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 !important;
+    border-radius: 20px;
+
+}
+
+.logo-img {
+    padding: 18px 24px;
+    width: 44%;
+}
+
+.fa-user {
+    font-size: 24px;
+    color: #7C7E87;
+}
+
+.user-name {
+    color: #7C7E87;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fa-chevron-down {
+    color: #7C7E87;
+    font-weight: 300 !important;
+}
+
+.user {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
