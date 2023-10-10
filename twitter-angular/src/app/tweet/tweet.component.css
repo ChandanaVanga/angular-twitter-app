@@ -1,3 +1,9 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .header {
     background-color: white;
     box-shadow: 0px 0px 16px inset #e6e6e6;
@@ -36,3 +42,157 @@
     align-items: center;
     padding: 0 24px;
 }
+
+.body {
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 16px inset #e6e6e6;
+    display: flex;
+    border-radius: 24px;
+}
+
+.tweets-header {
+    font-size: 26px;
+    color: #575757;
+    margin-left: 24px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+}
+
+/* .bottom-shadow {
+    box-shadow: 0px 3px #8b8b8b;
+
+} */
+
+.post-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    background-color: #ACB4FB;
+    box-shadow: 0px 0px 16px inset #838BDF;
+    border: none;
+    color: white;
+    padding: 4px 8px 4px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 24px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+}
+
+.fa-plus {
+    font-weight: lighter !important;
+    /* padding: 2px; */
+}
+
+.icon-gackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ACB4FB;
+    box-shadow: 0px 0px 16px inset #838BDF;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+}
+
+.dot1 {
+    background-color: #AAE5FE;
+    box-shadow: 0px 0px 1px inset #60a2be;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    margin-left: auto;
+}
+.dot2 {
+    background-color: #AAE5FE;
+    box-shadow: 0px 0px 1px inset #60a2be;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+}
+.dot3 {
+    background-color: #AAE5FE;
+    box-shadow: 0px 0px 1px inset #60a2be;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+}
+.dot4 {
+    background-color: #AAE5FE;
+    box-shadow: 0px 0px 1px inset #60a2be;
+    border-radius: 50%;
+    height: 2px;
+    width: 2px;
+}
+
+.fa-calendar {
+    color: #65caf5;
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+.date {
+    font-size: 16px;
+    color: #878787;
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+}
+
+.by-user {
+    font-size: 16px;
+    color: #878787;
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+
+}
+
+.tweet {
+    font-size: 20px;
+    color: #606060;
+    font-family: 'Poppins', sans-serif;
+    margin: 0%;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    /* column-gap: 24px; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    background-color: white;
+    box-shadow: 0px 0px 16px inset #e2e2e2;
+    border-radius: 10PX;
+  gap: 20px;
+  width: 290px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 24px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Four equal columns */
+    gap: 24px; /* Adjust the gap as needed */
+  }

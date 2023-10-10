@@ -1,28 +1,21 @@
 import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  // Define a variable to store the token
+  private authToken: string | null = null;
 
-  // baseApiUrl: string =  environment?.baseApiUrl;
+  constructor() {}
 
-  // constructor(private http:HttpClient) { }
+  // Method to set the token in the service
+  setToken(token: string | null): void {
+    this.authToken = token;
+  }
 
-  // postUser(body:any){
-  //   return this.http.post(this.baseApiUrl + '/api/users/registration', body)
-  // }
-
-  // fetchMobiles(){
-
-  // fetchMobiles() {
-  //  return this.http.get(this.baseApiUrl + '/api/mobile');
-  // }
-
-  // deleteMobile(id:any) {
-  //   return this.http.delete(this.baseApiUrl + '/api/mobile/' + id)
-  // }
+  // Method to get the token from the service
+  getToken(): string | null {
+    return this.authToken;
+  }
 }

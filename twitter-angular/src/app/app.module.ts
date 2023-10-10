@@ -7,10 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthService } from './auth.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TweetComponent } from './tweet/tweet.component';
-
+import { AuthInterceptor } from './interceptors/auth-interceptor';
+import { DateFormatPipe } from './date-format.pipe'; // Import your interceptor
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    TweetComponent
+    TweetComponent,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,16 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [
+    {
+      provide: AuthService
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor, // Add your interceptor class here
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
