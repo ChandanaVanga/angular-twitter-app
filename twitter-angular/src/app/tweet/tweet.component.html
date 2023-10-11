@@ -16,7 +16,7 @@
             <!-- <hr style="color: rgb(151, 151, 151);"> -->
         </div>
         <div>
-            <button class="post-btn">Post Tweet<span class="icon-gackground"><i class="fa fa-plus"></i></span></button>
+                <button (click)="openDialog()" class="post-btn">Post Tweet<span class="icon-gackground"><i class="fa fa-plus"></i></span></button>
         </div>
         <div class="card-container">
         <div class="card" *ngFor="let item of data">

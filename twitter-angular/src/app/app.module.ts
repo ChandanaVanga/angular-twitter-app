@@ -11,8 +11,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TweetComponent } from './tweet/tweet.component';
 import { AuthInterceptor } from './interceptors/auth-interceptor';
-import { DateFormatPipe } from './date-format.pipe'; // Import your interceptor
-
+import { DateFormatPipe } from './date-format.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import your interceptor
+import { MatButtonModule } from '@angular/material/button';
+import { TweetUpdateComponent } from './tweet-update/tweet-update.component';
+import { TweetCreateComponent } from './tweet-create/tweet-create.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -27,14 +31,19 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     TweetComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    TweetUpdateComponent,
+    TweetCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [
     {
