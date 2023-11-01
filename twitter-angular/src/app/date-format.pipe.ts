@@ -8,7 +8,8 @@ export class DateFormatPipe implements PipeTransform {
     if (!value) return ''; // Handle null or empty values
 
     const parsedDate = new Date(value);
-    const formattedDate = parsedDate.toLocaleDateString('en-US', {
+    console.log('Parsed Date:', parsedDate)
+    const formattedDate = parsedDate.toLocaleTimeString ('en-US', {
       year: '2-digit',
       month: '2-digit',
       day: '2-digit',
@@ -16,7 +17,9 @@ export class DateFormatPipe implements PipeTransform {
       minute: '2-digit',
       hour12: true
     });
+    console.log('Formated Date:', formattedDate)
 
     return formattedDate;
   }
+  
 }

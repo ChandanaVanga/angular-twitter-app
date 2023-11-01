@@ -21,11 +21,14 @@ export class TweetComponent implements OnInit {
   constructor(private http: HttpClient, private authService: AuthService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
+    debugger
     this.fetchData();
   }
 
   fetchData(): void {
-    const authToken = this.authService.getToken();
+    debugger
+    const authToken = localStorage.getItem('authToken');
+    //const authToken = this.authService.getToken();
 
     if (authToken) {
       // Construct headers with the JWT token
@@ -35,10 +38,13 @@ export class TweetComponent implements OnInit {
 
       // Make the HTTP request with the token
       this.http.get<any[]>(this.baseApiUrl +'/api/tweet', { headers }).subscribe((data) => {
+        debugger
         this.data = data;
       });
     } else {
       // Handle the case where the token is not available
+      let error: string = "Error fetching data";
+      console.error('Error fetching data:', error);
     }
   }
 
