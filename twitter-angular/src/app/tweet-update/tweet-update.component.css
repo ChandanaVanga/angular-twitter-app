@@ -1,0 +1,147 @@
+.tweet-heading {
+    font-size: 22px;
+    color: #606060;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 132px 0 0; 
+}
+
+.tweet-actions {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    /* padding: 24px; */
+}
+
+.dialog-content {
+    padding: 0 24px;
+}
+.dialog-actions {
+    padding: 24px;
+    /* bottom: 16px; */
+}
+.close-comment {
+    float: right;
+    bottom: 16px;
+}
+
+p {
+    margin-top: 0 !important;
+}
+
+.tweet {
+    font-size: 16px;
+    color: #606060;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 12px;
+}
+
+.comment-user, .comment-time {
+    font-size: 16px;
+    color: #606060;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0px;
+}
+
+.dynamic-values {
+    font-size: 15px;
+    color: #747474;
+    font-family: 'Poppins', sans-serif;
+}
+
+.comment-heading {
+    font-size: 20px;
+    color: #525252;
+    font-family: 'Poppins', sans-serif;
+    margin: 18px 0 0 0 !important;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.comment-details {
+    display: flex;
+    gap: 8px;
+}
+
+.msg {
+    color: rgb(156, 156, 156);
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-delete {
+    /* background-color: aqua; */
+    font-size: 20px !important;
+}
+
+.mat-mdc-unelevated-button>.mat-icon, .mat-mdc-raised-button>.mat-icon, .mat-mdc-outlined-button>.mat-icon {
+    margin-left: 0;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-size: 1.125rem;
+    height: 1.125rem;
+    width: 1.125rem;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.delete {
+    border-color: red !important;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+    border-color: rgb(223, 220, 220) !important;
+}
+
+.comment-text {
+    margin-left: 32px;
+    width: 20rem;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.textarea {
+    border-color: #d9d5d5;
+    width: 95%;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 12px 0;
+    outline: none;
+}
+
+.comment-button {
+    color: green !important;
+    background-color: rgb(249, 255, 249) !important;
+    font-size: 16px;
+}
+
+.close-button {
+    color: rgb(97, 97, 97) !important;
+    background-color: rgb(247, 247, 247) !important;
+    font-size: 16px;
+}
+
+.dialog-container, .close-comment {
+    background-color: white;
+    box-shadow: 0px 0px 12px inset #e0e0e0;
+   
+    }
+
+    .custom-dialog {
+        border-radius: 10px; /* Adjust the value as needed */
+      }
+
+      #custom-dialog-container {
+        border-radius: 20px !important; /* Adjust the value as needed */
+      }

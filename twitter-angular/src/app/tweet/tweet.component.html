@@ -18,7 +18,7 @@
         <div>
                 <button (click)="openDialog()" class="post-btn">Post Tweet<span class="icon-gackground"><i class="fa fa-plus"></i></span></button>
         </div>
-        <div class="card-container">
+        <div (click)="openCardDialog()" class="card-container" id="custom-dialog-container">
         <div class="card" *ngFor="let item of data">
             <div class="card-top">
                 <p class="date"><i class="fa fa-calendar"></i> {{ item.created_at | dateFormat }}</p>

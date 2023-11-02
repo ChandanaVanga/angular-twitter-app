@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TweetUpdateComponent } from './tweet-update/tweet-update.component';
 import { TweetCreateComponent } from './tweet-create/tweet-create.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -43,7 +44,8 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule
   ],
   providers: [
     {

@@ -1,1 +1,57 @@
-<p>tweet-update works!</p>
+<div class="dialog-container" id="custom-dialog-container">
+
+    <mat-dialog-actions class="dialog-actions">
+        <div class="tweet-actions">
+            <p class="tweet-heading">Tweets #1</p>
+            <button mat-stroked-button color="primary"><mat-icon>loop</mat-icon>Update</button>
+            <!-- <button mat-stroked-button color="primary">Primary</button> -->
+            <button mat-stroked-button color="warn"><mat-icon>delete_outline</mat-icon>delete</button>
+        </div>
+    </mat-dialog-actions>
+
+    <mat-dialog-content class="dialog-content">
+        <div>
+
+            <p class="tweet">Tweet: <span class="dynamic-values">Name</span></p>
+            <p class="tweet">Created By: <span class="dynamic-values">Username</span></p>
+            <p class="tweet">Created At: <span class="dynamic-values">Time</span></p>
+
+        </div>
+
+        <div>
+            <p class="comment-heading">Comment</p>
+            <hr>
+            <div class="comment">
+                <div>
+                    <div class="comment-details">
+                        <!-- <mat-icon class="msg"> chat</mat-icon> -->
+                        <!-- <mat-icon class="msg"> chat_bubble_outline</mat-icon> -->
+                        <mat-icon class="msg"> comment</mat-icon>
+                        <span class="comment-user">username</span>
+                        <span class="comment-time">time</span>
+                    </div>
+                    <p class="comment-text">Lorem ipsum dolor sit amet consectetur. Diam nec purus massa eque eu in
+                        posuere.</p>
+                </div>
+                <button mat-stroked-button color="warn" class="delete"><mat-icon
+                        class="comment-delete">delete_outline</mat-icon></button>
+            </div>
+            <hr>
+            <div> <textarea rows="3" cols="44" placeholder="Add Comment..." class="textarea"></textarea></div>
+            <!-- <div>
+                <button mat-raised-button>Basic</button>
+                <button>Comment</button>
+            </div> -->
+        </div>
+
+    </mat-dialog-content>
+
+
+    <mat-dialog-actions class="dialog-actions" align="end">
+
+        <button mat-raised-button class="close-button">Close</button>
+        <button mat-raised-button class="comment-button">Comment</button>
+
+    </mat-dialog-actions>
+
+</div>

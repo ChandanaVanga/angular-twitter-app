@@ -1,16 +1,18 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ApiService } from '../api.service';
 import { AuthService } from '../auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { TweetCreateComponent } from '../tweet-create/tweet-create.component';
+import { TweetUpdateComponent } from '../tweet-update/tweet-update.component';
 
 @Component({
   selector: 'app-tweet',
   templateUrl: './tweet.component.html',
   styleUrls: ['./tweet.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TweetComponent implements OnInit {
 
@@ -51,6 +53,20 @@ export class TweetComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(TweetCreateComponent, {
       width: '400px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Handle any data passed back from the dialog
+        console.log('Dialog result:', result);
+      }
+    });
+  }
+
+  openCardDialog(): void {
+    const dialogRef = this.dialog.open(TweetUpdateComponent, {
+      panelClass: 'custom-dialog',
+      width: '500px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
