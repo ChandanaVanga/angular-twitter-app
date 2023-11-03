@@ -7,9 +7,9 @@
         <p class="welcome-text">We are really happy to see you again!</p>
         <form class="fields" action="" (ngSubmit)="login()">
             <label class="label" for="">Eamil</label>
-            <input type="text" [(ngModel)]="credentials.email" name="email" placeholder="eg: abc@gmail.com" required>
+            <input class="feild" type="text" [(ngModel)]="credentials.email" name="email" placeholder="eg: abc@gmail.com" required>
             <label class="label" for="">Password</label>
-            <input type="password" [(ngModel)]="credentials.passwor_d" name="password" placeholder="eg: ab12" required>
+            <input class="feild" type="password" [(ngModel)]="credentials.passwor_d" name="password" placeholder="eg: ab12" required>
             <button class="submit-button" type="submit">Login</button>
             <!-- <div><i class="fa fa-arrow-right"></i></div> -->
         </form>

@@ -187,8 +187,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 47px;
+    border-radius: 20px;
+    overflow: hidden;
   }
 
-  #custom-dialog-container {
-    border-radius: 20px !important; /* Adjust the value as needed */
-  }
+  /* #custom-dialog-container {
+    border-radius: 20px !important;
+  } */
+
+  

@@ -104,3 +104,7 @@ input {
     font-weight: normal;
     color: #1E5DFF;
 }
+
+.feild {
+    outline: none;
+}

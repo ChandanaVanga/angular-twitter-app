@@ -17,6 +17,19 @@ import { TweetUpdateComponent } from '../tweet-update/tweet-update.component';
 export class TweetComponent implements OnInit {
 
   data: any[] = []; // Initialize an empty array to store the fetched data
+  
+  responseData: any;
+
+  tweet: any = {
+    tweet_id: '',
+    user_id: '',
+    user_name: '',
+    title: '',
+    created_at: ''
+  };
+
+
+  tweetId: number = 1;
 
   baseApiUrl: string =  environment?.baseApiUrl;
  
@@ -63,12 +76,13 @@ export class TweetComponent implements OnInit {
     });
   }
 
-  openCardDialog(): void {
+  openCardDialog(item: any): void {
     const dialogRef = this.dialog.open(TweetUpdateComponent, {
       panelClass: 'custom-dialog',
       width: '500px',
+      data: item // Pass the data to the dialog
     });
-
+  
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         // Handle any data passed back from the dialog
@@ -76,6 +90,17 @@ export class TweetComponent implements OnInit {
       }
     });
   }
+  
+
+
+  // getById() {
+  //   const url = `http://localhost:5000/api/tweet/${this.tweetId}`;
+    
+  //   this.http.get(url).subscribe(data => {
+  //     this.responseData = data;
+  //     // Handle the response data here
+  //   });
+  // }
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(TweetCreateComponent, {
   //     width: '400px',

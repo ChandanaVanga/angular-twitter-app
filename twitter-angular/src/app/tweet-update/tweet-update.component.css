@@ -134,14 +134,8 @@ hr {
 
 .dialog-container, .close-comment {
     background-color: white;
-    box-shadow: 0px 0px 12px inset #e0e0e0;
-   
+    box-shadow: 0px 0px 12px inset #aaaaaa;
+    
     }
 
-    .custom-dialog {
-        border-radius: 10px; /* Adjust the value as needed */
-      }
-
-      #custom-dialog-container {
-        border-radius: 20px !important; /* Adjust the value as needed */
-      }
+ 
