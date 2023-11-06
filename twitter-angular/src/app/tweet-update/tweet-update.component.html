@@ -5,7 +5,7 @@
             <p class="tweet-heading">Tweet# {{ data.tweet_id }}</p>
             <button mat-stroked-button color="primary"><mat-icon>loop</mat-icon>Update</button>
             <!-- <button mat-stroked-button color="primary">Primary</button> -->
-            <button mat-stroked-button color="warn"><mat-icon>delete_outline</mat-icon>delete</button>
+            <button mat-stroked-button color="warn" (click)="onDeleteTweet(data.tweet_id)"><mat-icon>delete_outline</mat-icon>delete</button>
         </div>
     </mat-dialog-actions>
 
@@ -13,25 +13,24 @@
         <div>
             <p class="tweet">Tweet: <span class="dynamic-values">{{ data.title }}</span></p>
             <p class="tweet">Created By: <span class="dynamic-values">{{ data.user_name }}</span></p>
-            <p class="tweet">Created At: <span class="dynamic-values">{{ data.created_at }}</span></p>
+            <p class="tweet">Created At: <span class="dynamic-values">{{ data.created_at | dateFormat }}</span></p>
           </div>
 
         <div>
             <p class="comment-heading">Comment</p>
             <hr>
-            <div class="comment">
+            <div class="comment" *ngFor="let item of comment">
                 <div>
                     <div class="comment-details">
                         <!-- <mat-icon class="msg"> chat</mat-icon> -->
                         <!-- <mat-icon class="msg"> chat_bubble_outline</mat-icon> -->
                         <mat-icon class="msg"> comment</mat-icon>
-                        <span class="comment-user">username</span>
-                        <span class="comment-time">{{ comments.created_at }}</span>
+                        <span class="comment-user">{{ item.user_name }}</span>
+                        <span class="comment-time">{{ item.created_at | dateFormat }}</span>
                     </div>
-                    <p class="comment-text">Lorem ipsum dolor sit amet consectetur. Diam nec purus massa eque eu in
-                        posuere.</p>
+                    <p class="comment-text">{{ item.text }}</p>
                 </div>
-                <button mat-stroked-button color="warn" class="delete"><mat-icon
+                <button mat-stroked-button color="warn" class="delete" (click)="onDeleteComment(item.comment_id)"><mat-icon
                         class="comment-delete">delete_outline</mat-icon></button>
             </div>
             <hr>

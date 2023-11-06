@@ -20,13 +20,13 @@ export class TweetComponent implements OnInit {
   
   responseData: any;
 
-  tweet: any = {
-    tweet_id: '',
-    user_id: '',
-    user_name: '',
-    title: '',
-    created_at: ''
-  };
+  // tweet: any = {
+  //   tweet_id: '',
+  //   user_id: '',
+  //   user_name: '',
+  //   title: '',
+  //   created_at: ''
+  // };
 
 
   tweetId: number = 1;
@@ -81,6 +81,7 @@ export class TweetComponent implements OnInit {
       panelClass: 'custom-dialog',
       width: '500px',
       data: item // Pass the data to the dialog
+      // data: { tweet_id: item.tweet_id }
     });
   
     dialogRef.afterClosed().subscribe(result => {
