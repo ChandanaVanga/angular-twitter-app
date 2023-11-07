@@ -80,8 +80,16 @@ export class TweetComponent implements OnInit {
     const dialogRef = this.dialog.open(TweetUpdateComponent, {
       panelClass: 'custom-dialog',
       width: '500px',
-      data: item // Pass the data to the dialog
+    // data: item // Pass the data to the dialog
       // data: { tweet_id: item.tweet_id }
+      // data: { tweet_id: item.tweet_id }
+
+      data: {
+        tweet_id: item.tweet_id,
+        title: item.title,
+        user_name: item.user_name,
+        created_at: item.created_at
+      }
     });
   
     dialogRef.afterClosed().subscribe(result => {

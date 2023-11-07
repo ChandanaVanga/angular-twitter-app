@@ -34,7 +34,7 @@
                         class="comment-delete">delete_outline</mat-icon></button>
             </div>
             <hr>
-            <div> <textarea rows="3" cols="44" placeholder="Add Comment..." class="textarea"></textarea></div>
+            <div> <textarea rows="3" cols="44" placeholder="Add Comment..." class="textarea" [(ngModel)]="tweet.text"></textarea></div>
            
         </div>
 
@@ -44,7 +44,7 @@
     <mat-dialog-actions class="dialog-actions" align="end">
 
         <button mat-raised-button class="close-button" (click)="closeDialog()">Close</button>
-        <button mat-raised-button class="comment-button">Comment</button>
+        <button mat-raised-button class="comment-button" (click)="createComment()">Comment</button>
 
     </mat-dialog-actions>
 

@@ -3,6 +3,7 @@ import { Component, Inject, OnInit  } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-tweet-update',
@@ -11,13 +12,20 @@ import { environment } from 'src/environments/environment';
 })
 export class TweetUpdateComponent implements OnInit {
 
+  tweet: any = {
+    text: '',
+  };
+
   comments: any[] = []; // Initialize an empty array to store the fetched data
 
   comment: any;
 
   baseApiUrl: string =  environment?.baseApiUrl;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, public dialogRef: MatDialogRef<TweetUpdateComponent>, private router: Router) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private http: HttpClient, 
+  public dialogRef: MatDialogRef<TweetUpdateComponent>, private router: Router, private cd: ChangeDetectorRef) {
+    this.tweet.tweetId = data.tweet_id; 
+  }
 
   ngOnInit(): void {
     debugger
@@ -71,6 +79,36 @@ export class TweetUpdateComponent implements OnInit {
 
   // }
 
+  createComment() {
+    const apiUrl = this.baseApiUrl + '/api/comment';
+    const authToken = localStorage.getItem('authToken');
+  
+    if (!authToken) {
+      console.error('Authentication token is missing. Please log in.');
+      return;
+    }
+  
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${authToken}`, // Include the token in the Authorization header
+    });
+  
+    this.http.post(apiUrl, this.tweet, { headers }).subscribe(
+      (response) => {
+        console.log('Comment created successfully:', response);
+         // Add the newly created comment to the comments array
+      this.comments.push(response);
+
+      // Trigger change detection to update the UI
+      this.cd.detectChanges();
+      
+      },
+      (error) => {
+        console.error('Error creating comment:', error);
+      }
+    );
+  }
+
 
   onDeleteTweet(tweet_id: number): void {
     const authToken = localStorage.getItem('authToken'); 
@@ -95,24 +133,32 @@ export class TweetUpdateComponent implements OnInit {
   }
   
 
+
+
   onDeleteComment(comment_id: number): void {
-    const authToken = localStorage.getItem('authToken'); 
+    const authToken = localStorage.getItem('authToken');
   
     if (authToken) {
       const headers = new HttpHeaders({
         'Authorization': `Bearer ${authToken}`,
       });
   
-      // Make an HTTP DELETE request to API with the tweet ID
+      // Make an HTTP DELETE request to API with the comment ID
       this.http.delete(`${this.baseApiUrl}/api/comment/${comment_id}`, { headers }).subscribe(() => {
-        console.log('Tweet deleted successfully.');
-        this.fetchData();
+        console.log('Comment deleted successfully.');
+  
+        // Update the data array by filtering out the deleted comment
+        this.data = this.data.filter((comment: any) => comment.comment_id !== comment_id);
+  
+        // Trigger change detection to update the UI
+        this.cd.detectChanges();
       });
     } else {
       console.error('Error: Unauthorized');
       // Handle the case where the user is not authorized.
     }
   }
+  
 }
 
 
